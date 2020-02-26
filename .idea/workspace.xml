@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be078966-8ade-4eb2-a5c3-ffd686b6a3f8" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Tzuyunii/log121-dicegame-lab2&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change afterPath="$PROJECT_DIR$/filetypes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/github.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/AbstractJeu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/CollectionDes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/CollectionJoueurs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/Fabrique.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/IStrategie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/framework/Jeu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/De.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/De.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Face.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Face.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Framework/Joueurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestJUnit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testjunit/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
