@@ -1,24 +1,12 @@
 package framework;
 
-public class Face {
+import java.util.Random;
 
-    private int chiffre;
-    private De de;
-
-    public Face() {
-
-    }
-
-
-
-    public int getChiffreAleatoire(int nbFaces) {
-
-        //TODO
-
-        return 0;
-    }
-
-
-
+public class Face
+{
+    public int getChiffreAleatoire(int nbFaces){
+        int nb = new Random().nextInt(nbFaces) + 1;
+        return nb;
+    };
 
 }
