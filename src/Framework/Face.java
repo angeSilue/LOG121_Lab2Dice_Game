@@ -1,4 +1,5 @@
 package Framework;
 
-public class Face {
+public class Face
+{
 }
