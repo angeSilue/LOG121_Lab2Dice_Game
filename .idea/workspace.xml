@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be078966-8ade-4eb2-a5c3-ffd686b6a3f8" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Tzuyunii/log121-dicegame-lab2&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change afterPath="$PROJECT_DIR$/src/buncoplus/JeuBuncoplus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buncoplus/StrategieBuncoplus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/AbstractJeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/AbstractJeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/CollectionDes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/CollectionDes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/CollectionJoueurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/CollectionJoueurs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/De.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/De.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/Fabrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Fabrique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/Face.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Face.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Jeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/framework/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Joueur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +73,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1582735542058">
+    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1582737464323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582735542058" />
+    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582737464323" />
     <state x="272" y="73" key="CommitChangelistDialog2" timestamp="1582677765272">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
