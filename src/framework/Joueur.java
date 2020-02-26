@@ -8,6 +8,12 @@ public class Joueur implements Comparable {
     private boolean vainqueur;
 
 
+    public Joueur() {
+
+    }
+
+
+
     @Override
     public int compareTo(Object o) {
         return 0;
