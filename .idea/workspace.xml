@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be078966-8ade-4eb2-a5c3-ffd686b6a3f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log121-dicegame-lab2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Framework/De.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Framework/Face.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Framework/Joueurs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_mac/laf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_mac/path.macros.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseRefactoring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codestyles/Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/colors.scheme.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/debugger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk.table.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/updates.xml" beforeDir="false" />
+    <list default="true" id="be078966-8ade-4eb2-a5c3-ffd686b6a3f8" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Tzuyunii/log121-dicegame-lab2&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change afterPath="$PROJECT_DIR$/filetypes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/github.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +65,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582676119174</updated>
-      <workItem from="1582676120865" duration="719000" />
+      <workItem from="1582676120865" duration="1886000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="272" y="73" key="CommitChangelistDialog2" timestamp="1582677765272">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="272" y="73" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582677765272" />
+    <state x="407" y="323" key="git4idea.merge.GitPullDialog" timestamp="1582677872106">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="407" y="323" key="git4idea.merge.GitPullDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582677872106" />
   </component>
 </project>
