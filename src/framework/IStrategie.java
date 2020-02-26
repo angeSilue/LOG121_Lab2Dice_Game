@@ -1,6 +1,6 @@
 package framework;
 
-public interface  IStrategie {
+public interface IStrategie {
 
     void calculerLeVainqueur(Jeu jeu);
 

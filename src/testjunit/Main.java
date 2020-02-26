@@ -1,4 +1,4 @@
-package TestJUnit;
+package testjunit;
 
 public class Main {
 

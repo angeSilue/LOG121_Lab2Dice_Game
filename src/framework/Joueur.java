@@ -1,4 +1,5 @@
 package framework;
+<<<<<<< HEAD
 
 public class Joueur implements Comparable<Joueur> {
     String nom;
