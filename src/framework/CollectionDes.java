@@ -1,4 +1,4 @@
-package Framework;
+package framework;
 
 public class CollectionDes {
     static int taille = 1 ;

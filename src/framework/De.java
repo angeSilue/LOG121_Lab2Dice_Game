@@ -1,4 +1,4 @@
-package Framework;
+package framework;
 
 public class De implements Comparable<De> {
     int nbFaces;
