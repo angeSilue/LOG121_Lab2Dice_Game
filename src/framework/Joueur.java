@@ -1,24 +1,27 @@
 package framework;
+import java.lang.*;
 
-public class Joueur implements Comparable {
+public class Joueur implements Comparable<Joueur> {
+    String nom;
+    int scoreTour;
+    int scoreAccumule;
+    boolean vainqueur;
 
-    private String nom;
-    private int scoreAccumule;
-    private int scoreTour;
-    private boolean vainqueur;
-
-
-    public Joueur() {
-
+    Joueur(String nom, int scoreTour, int scoreAccumule){
+        this.nom = nom;
+        this.scoreTour= scoreTour;
+        this.scoreAccumule = scoreAccumule;
     }
-
 
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Joueur j) {
+        if(scoreAccumule ==j.scoreAccumule)
+            return 0;
+        else if(scoreAccumule>j.scoreAccumule)
+            return 1;
+        else
+            return -1;
     }
-
-
-
 }
+
