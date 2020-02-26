@@ -5,6 +5,7 @@
       <mapping pattern="De" type="JAVA" />
       <mapping pattern="Joueurs" type="JAVA" />
       <mapping pattern="Face" type="JAVA" />
+      <mapping pattern="intet" type="PLAIN_TEXT" />
       <mapping pattern="Comparable" type="SPI" />
     </extensionMap>
   </component>
