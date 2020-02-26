@@ -3,6 +3,8 @@
     <extensionMap>
       <mapping ext="javaclass" type="CLASS" />
       <mapping pattern="De" type="JAVA" />
+      <mapping pattern="Joueurs" type="JAVA" />
+      <mapping pattern="Face" type="JAVA" />
     </extensionMap>
   </component>
 </application>
