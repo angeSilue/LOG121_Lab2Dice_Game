@@ -7,6 +7,4 @@ public interface IStrategie {
     void calculerScoreTour(Jeu jeu);
 
 
-
-
 }

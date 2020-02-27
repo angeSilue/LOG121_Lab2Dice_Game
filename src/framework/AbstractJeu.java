@@ -2,13 +2,13 @@ package framework;
 
 public abstract class AbstractJeu {
 
-    public void MethodeTemplate(){
-        CalculerScoreTour();
-        CalculerLeVainqueur();
+    public final void MethodeTemplate(){
+        calculerScoreTour();
+        calculerLeVainqueur();
     }
 
-    public abstract void CalculerScoreTour();
-    public abstract void CalculerLeVainqueur();
+    public abstract void calculerScoreTour();
+    public abstract void calculerLeVainqueur();
 
 
 }

@@ -1,6 +1,7 @@
 package framework;
 
 public class Joueur implements Comparable<Joueur> {
+
     String nom;
     int scoreTour;
     int scoreAccumule;
@@ -21,6 +22,39 @@ public class Joueur implements Comparable<Joueur> {
             return 1;
         else
             return -1;
+    }
+
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getScoreTour() {
+        return scoreTour;
+    }
+
+    public void setScoreTour(int scoreTour) {
+        this.scoreTour = scoreTour;
+    }
+
+    public int getScoreAccumule() {
+        return scoreAccumule;
+    }
+
+    public void setScoreAccumule(int scoreAccumule) {
+        this.scoreAccumule = scoreAccumule;
+    }
+
+    public boolean isVainqueur() {
+        return vainqueur;
+    }
+
+    public void setVainqueur(boolean vainqueur) {
+        this.vainqueur = vainqueur;
     }
 }
 
