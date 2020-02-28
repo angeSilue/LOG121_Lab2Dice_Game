@@ -5,6 +5,14 @@ public class De implements Comparable<De> {
     private int idDes;
     private int faceActu;
 
+    public De(){
+        this(0);
+    }
+
+    public De(int nbFaces) {
+        this(0, 0);
+    }
+
     public De(int nbFaces, int id){
         this.nbFaces = nbFaces;
         this.idDes = id;

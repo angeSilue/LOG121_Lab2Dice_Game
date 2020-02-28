@@ -7,7 +7,15 @@ public class Joueur implements Comparable<Joueur> {
     int scoreAccumule;
     boolean vainqueur;
 
-    Joueur(String nom, int scoreTour, int scoreAccumule){
+    public Joueur() {
+        this("");
+    }
+
+    public Joueur(String nom) {
+        this("", 0, 0);
+    }
+
+    public Joueur(String nom, int scoreTour, int scoreAccumule){
         this.nom = nom;
         this.scoreTour= scoreTour;
         this.scoreAccumule = scoreAccumule;
@@ -16,9 +24,9 @@ public class Joueur implements Comparable<Joueur> {
 
     @Override
     public int compareTo(Joueur j) {
-        if(scoreAccumule ==j.scoreAccumule)
+        if(scoreAccumule == j.scoreAccumule)
             return 0;
-        else if(scoreAccumule>j.scoreAccumule)
+        else if(scoreAccumule > j.scoreAccumule)
             return 1;
         else
             return -1;

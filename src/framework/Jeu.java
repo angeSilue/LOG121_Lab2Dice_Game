@@ -3,15 +3,21 @@ package framework;
 public class Jeu extends AbstractJeu {
 
     private int nbTours;
+    private int tourActuel;
     private IStrategie strategie;
-    private CollectionDes collectionDes = new CollectionDes();
-    private CollectionJoueurs collectionJoueurs = new CollectionJoueurs();
+    private CollectionDes collectionDes;
+    private CollectionJoueurs collectionJoueurs;
 
-
+    public Jeu() {
+        this(null, 0);
+    }
 
     public Jeu(IStrategie strategie, int nbTours) {
         this.strategie = strategie;
         this.nbTours = nbTours;
+        collectionJoueurs = new CollectionJoueurs();
+        collectionDes = new CollectionDes();
+
 
     }
 
@@ -22,8 +28,6 @@ public class Jeu extends AbstractJeu {
     public void calculerScoreTour() {
         strategie.calculerScoreTour(this);
     }
-
-
 
     @Override
     public void calculerLeVainqueur() {
@@ -37,6 +41,22 @@ public class Jeu extends AbstractJeu {
 
     public void setNbTours(int nbTours) {
         this.nbTours = nbTours;
+    }
+
+    public int getTourActuel() {
+        return tourActuel;
+    }
+
+    public void setTourActuel(int tourActuel) {
+        this.tourActuel = tourActuel;
+    }
+
+    public IStrategie getStrategie() {
+        return strategie;
+    }
+
+    public void setStrategie(IStrategie strategie) {
+        this.strategie = strategie;
     }
 
     public CollectionDes getCollectionDes() {
@@ -54,8 +74,4 @@ public class Jeu extends AbstractJeu {
     public void setCollectionJoueurs(CollectionJoueurs collectionJoueurs) {
         this.collectionJoueurs = collectionJoueurs;
     }
-
-
-
-
 }
