@@ -1,41 +1,43 @@
 package framework;
 
 /**
- *  C'est la classe créatrice qui s'occupe de créer des instances des dés, des joueurs et d'un jeu.
+ *  C'est la classe créatrice qui s'occupe de créer les instances de dés, de joueurs.
  *  Le patron Template Method est utilisé.
  *  https://www.tutorialspoint.com/design_pattern/template_pattern.htm
  */
 public abstract class Fabrique {
 
-    private int nbJoueurs;
-    private int nbDes;
+    private static CollectionJoueurs collectionJoueurs;
+    private static CollectionDes collectionDes;
 
-
-    public final void demarrerJeu() {
-        creerJoueurs();
-        creerDes();
+    /**
+     * Cette méthode Template remplit les listes de joueurs et de dés de l'instance du jeu,
+     * et démarre la partie.
+     */
+    public final void demarrerJeu(Jeu jeu) {
+        jeu.setListeJoueurs(creerJoueurs());
+        jeu.setListeDes(creerDes());
+        jeu.deroulementPartie();
     }
 
-    public abstract void creerJoueurs();
-    public abstract void creerDes();
+    public abstract CollectionJoueurs creerJoueurs();
+
+    public abstract CollectionDes creerDes();
 
 
-
-
-
-    public int getNbJoueurs() {
-        return nbJoueurs;
+    public static CollectionJoueurs getCollectionJoueurs() {
+        return collectionJoueurs;
     }
 
-    public void setNbJoueurs(int nbJoueurs) {
-        this.nbJoueurs = nbJoueurs;
+    public void setCollectionJoueurs(CollectionJoueurs collectionJoueurs) {
+        Fabrique.collectionJoueurs = collectionJoueurs;
     }
 
-    public int getNbDes() {
-        return nbDes;
+    public static CollectionDes getCollectionDes() {
+        return collectionDes;
     }
 
-    public void setNbDes(int nbDes) {
-        this.nbDes = nbDes;
+    public static void setCollectionDes(CollectionDes collectionDes) {
+        Fabrique.collectionDes = collectionDes;
     }
 }

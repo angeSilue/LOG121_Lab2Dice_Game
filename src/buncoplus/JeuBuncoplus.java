@@ -1,27 +1,15 @@
 package buncoplus;
 
+import framework.Fabrique;
 import framework.IStrategie;
 import framework.Jeu;
 
 public class JeuBuncoplus extends Jeu {
 
+    private static final int nbTours = 6;
 
-    public JeuBuncoplus() {
-        this(null,0);
-    }
-
-    public JeuBuncoplus(IStrategie strategie, int nbTours) {
+    public JeuBuncoplus(IStrategie strategie) {
         super(strategie, nbTours);
-
-        FabriqueBuncoplus fabriqueBuncoplus = new FabriqueBuncoplus();
-        fabriqueBuncoplus.demarrerJeu();
-
     }
-
-
-
-
-
-
 
 }

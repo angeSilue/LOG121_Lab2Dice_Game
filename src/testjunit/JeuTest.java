@@ -1,24 +1,23 @@
 package testjunit;
 
+import buncoplus.JeuBuncoplus;
 import buncoplus.StrategieBuncoplus;
 import framework.IStrategie;
-import framework.Jeu;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+public class JeuTest {
 
-class JeuTest {
+    JeuBuncoplus jeuBuncoplus;
+    IStrategie strategie;
 
-    @BeforeEach
-    void setUp() {
-        IStrategie strategie = new StrategieBuncoplus();
-        Jeu jeu = new Jeu(strategie, 6);
 
+
+    @Test
+    public void testConstructorJeu() {
+        strategie = new StrategieBuncoplus();
+        jeuBuncoplus = new JeuBuncoplus(strategie);
     }
-
-
-
-
 
 
 

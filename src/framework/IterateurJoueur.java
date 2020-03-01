@@ -1,28 +1,34 @@
 package framework;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
 
-public class IterateurJoueur implements Iterator<Joueur> {
+/**
+ * Cette classe est adaptée de l'exemple de patron iterateur donné par le site:
+ * https://howtodoinjava.com/design-patterns/behavioral/iterator-design-pattern/
+ *
+ */
+public class IterateurJoueur implements Iterateur<Joueur> {
 
+    private Joueur[] listeJoueurs;
+    private int position;
+
+    public IterateurJoueur(Joueur[] listeJoueurs) {
+        this.listeJoueurs = listeJoueurs;
+        position = 0;
+    }
 
     @Override
     public boolean hasNext() {
-        return false;
+        if(position >= listeJoueurs.length) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public Joueur next() {
-        return null;
+        return listeJoueurs[position++];
     }
 
-    @Override
-    public void remove() {
 
-    }
 
-    @Override
-    public void forEachRemaining(Consumer<? super Joueur> action) {
-
-    }
 }

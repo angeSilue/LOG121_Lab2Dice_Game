@@ -1,28 +1,32 @@
 package framework;
 
-import java.util.Iterator;
-import java.util.function.Consumer;
 
-public class IterateurDe implements Iterator<De> {
+/**
+ * Cette classe est adaptée de l'exemple de patron iterateur donné par le site:
+ * https://howtodoinjava.com/design-patterns/behavioral/iterator-design-pattern/
+ *
+ */
+public class IterateurDe implements Iterateur<De> {
+    private De[] listeDes;
+    private int position;
 
+    public IterateurDe(De[] listeDes) {
+        this.listeDes = listeDes;
+        position = 0;
+    }
 
     @Override
     public boolean hasNext() {
-        return false;
+        if(position >= listeDes.length) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public De next() {
-        return null;
+        return listeDes[position++];
     }
 
-    @Override
-    public void remove() {
 
-    }
-
-    @Override
-    public void forEachRemaining(Consumer<? super De> action) {
-
-    }
 }

@@ -3,16 +3,17 @@ package framework;
 public class Joueur implements Comparable<Joueur> {
 
     String nom;
-    int scoreTour;
-    int scoreAccumule;
-    boolean vainqueur;
+    int scoreTour = 0;
+    int scoreAccumule = 0;
+    boolean vainqueur = false;
+    //boolean tourPasse = false;
 
     public Joueur() {
         this("");
     }
 
     public Joueur(String nom) {
-        this("", 0, 0);
+        this(nom, 0, 0);
     }
 
     public Joueur(String nom, int scoreTour, int scoreAccumule){
@@ -22,6 +23,11 @@ public class Joueur implements Comparable<Joueur> {
     }
 
 
+    /**
+     * https://www.javatpoint.com/Comparable-interface-in-collection-framework
+     * @param j
+     * @return
+     */
     @Override
     public int compareTo(Joueur j) {
         if(scoreAccumule == j.scoreAccumule)
@@ -64,5 +70,7 @@ public class Joueur implements Comparable<Joueur> {
     public void setVainqueur(boolean vainqueur) {
         this.vainqueur = vainqueur;
     }
+
+
 }
 
