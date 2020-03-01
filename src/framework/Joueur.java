@@ -30,12 +30,15 @@ public class Joueur implements Comparable<Joueur> {
      */
     @Override
     public int compareTo(Joueur j) {
-        if(scoreAccumule == j.scoreAccumule)
+        if(scoreAccumule == j.scoreAccumule) {
             return 0;
-        else if(scoreAccumule > j.scoreAccumule)
+        }
+        else if(scoreAccumule > j.scoreAccumule) {
             return 1;
-        else
+        }
+        else {
             return -1;
+        }
     }
 
 

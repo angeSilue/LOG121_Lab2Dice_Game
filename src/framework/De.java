@@ -31,12 +31,15 @@ public class De implements Comparable<De> {
 
     @Override
     public int compareTo(De de) {
-        if(faceActuelle == de.faceActuelle)
+        if(faceActuelle == de.faceActuelle) {
             return 0;
-        else if(faceActuelle >  de.faceActuelle)
+        }
+        else if(faceActuelle >  de.faceActuelle) {
             return 1;
-        else
+        }
+        else {
             return -1;
+        }
     }
 
 

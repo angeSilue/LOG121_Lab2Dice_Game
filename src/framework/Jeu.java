@@ -5,13 +5,12 @@ public class Jeu{
 
     private int nbTours;
     private int tourActuel = 0;
+    private Joueur joueurActuel;
     private boolean finPartie = false;
     private boolean finTour = false;
     private IStrategie strategie;
     private CollectionDes listeDes;
     private CollectionJoueurs listeJoueurs;
-    private Iterateur<Joueur> iterateurJoueur;
-    private Iterateur<De> iterateurDe;
 
     public Jeu() {
         this(null, 0);
@@ -36,18 +35,18 @@ public class Jeu{
                 calculerLeVainqueur();
             }
         }
-
     }
 
     public void jouerTour() {
         tourActuel++;
         System.out.println("\n"+"Tour: "+tourActuel);
         System.out.println("__________________________________________________________________");
-        iterateurJoueur = listeJoueurs.creerIterateur();
+        Iterateur<Joueur> iterateurJoueur = listeJoueurs.creerIterateur();
         while(iterateurJoueur.hasNext()) {
             Joueur joueur = iterateurJoueur.next();
-            iterateurDe = listeDes.creerIterateur();
-            System.out.println(joueur.getNom() + " brasse les dés: ");
+            joueurActuel = joueur;
+            Iterateur<De> iterateurDe = listeDes.creerIterateur();
+            System.out.println(joueurActuel.getNom() + " brasse les dés: ");
             while(iterateurDe.hasNext()) {
                 De de = iterateurDe.next();
                 de.brasserDe();
@@ -56,7 +55,12 @@ public class Jeu{
             calculerScoreTour();
         }
 
+        //Pour voir le score des joueurs à la fin d'un tour
+        for(int i = 0; i < listeJoueurs.getSize(); i++) {
+            System.out.println(listeJoueurs.getJoueur(i).getNom()+" a accumulé "+listeJoueurs.getJoueur(i).getScoreAccumule()+ " points");
+        }
 
+        
     }
 
 
@@ -67,8 +71,6 @@ public class Jeu{
     public void calculerLeVainqueur() {
         strategie.calculerLeVainqueur(this);
     }
-
-
 
 
 
@@ -88,6 +90,13 @@ public class Jeu{
         this.tourActuel = tourActuel;
     }
 
+    public Joueur getJoueurActuel() {
+        return joueurActuel;
+    }
+
+    public void setJoueurActuel(Joueur joueurActuel) {
+        this.joueurActuel = joueurActuel;
+    }
 
     public boolean isFinPartie() {
         return finPartie;
