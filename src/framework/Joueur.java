@@ -33,7 +33,7 @@ public class Joueur implements Comparable<Joueur> {
         if(scoreAccumule == j.scoreAccumule) {
             return 0;
         }
-        else if(scoreAccumule > j.scoreAccumule) {
+        else if(scoreAccumule < j.scoreAccumule) {
             return 1;
         }
         else {

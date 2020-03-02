@@ -2,12 +2,27 @@ package buncoplus;
 
 import framework.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class StrategieBuncoplus implements IStrategie {
 
 
     @Override
     public void calculerLeVainqueur(Jeu jeu) {
-        //TODO
+        ArrayList<Joueur> listeJoueur = new ArrayList<>();
+        Iterateur<Joueur> iterateurJoueur = jeu.getListeJoueurs().creerIterateur();
+        while(iterateurJoueur.hasNext()) {
+            listeJoueur.add(iterateurJoueur.next());
+        }
+        Collections.sort(listeJoueur);
+        for(int i = 0; i < listeJoueur.size(); i++) {
+            System.out.println(listeJoueur.get(i).getNom()+" est en position #" +(i+1)+" avec "+listeJoueur.get(i).getScoreAccumule()+" points");
+        }
+
+        listeJoueur.get(0).setVainqueur(true);
 
     }
 
