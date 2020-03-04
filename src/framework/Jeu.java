@@ -1,6 +1,11 @@
 package framework;
 
 
+/**
+ * LOG121_LAB-2
+ * Février 2020
+ * Réalisé par Vincent Chang et Ange-Christian Silue.
+ */
 public class Jeu{
 
     private int nbTours;
@@ -80,7 +85,6 @@ public class Jeu{
                         }
                         calculerScoreTour();
                     }
-
                 }
             }
 
