@@ -46,11 +46,9 @@ public class Jeu{
             Joueur joueur = iterateurJoueur.next();
             joueurActuel = joueur;
             Iterateur<De> iterateurDe = listeDes.creerIterateur();
-            System.out.println(joueurActuel.getNom() + " brasse les dés: ");
             while(iterateurDe.hasNext()) {
                 De de = iterateurDe.next();
                 de.brasserDe();
-                System.out.println("Nombre obtenu dans le Dé #"+de.getIdDe()+": "+de.getFaceActuelle());
             }
             calculerScoreTour();
         }

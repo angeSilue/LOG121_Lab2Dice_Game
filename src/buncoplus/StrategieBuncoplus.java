@@ -23,7 +23,7 @@ public class StrategieBuncoplus implements IStrategie {
         }
 
         listeJoueur.get(0).setVainqueur(true);
-
+        System.out.println("Le vainqueur est "+listeJoueur.get(0).getNom());
     }
 
     @Override
@@ -34,32 +34,45 @@ public class StrategieBuncoplus implements IStrategie {
         int scoreAccumule = 0;
         int desIdentiquesTour = 0;
         boolean prochainJoueur = false;
+        boolean troisDesIdentiques = false; //true si les 3 dés sont identiques, mais pas identiques au tour
+        int premierChiffre = 0;
 
+        ArrayList<De> listeDes = new ArrayList<>();
+        System.out.println("Joueur actuel: "+joueurActuel.getNom());
         while(iterateurDe.hasNext()) {
             De de = iterateurDe.next();
+            listeDes.add(de);
+            Collections.sort(listeDes);
             scoreAccumule = joueurActuel.getScoreAccumule();
             if(de.getFaceActuelle() == tourActuel) {
                 desIdentiquesTour++;
                 prochainJoueur = false;
             }
+            System.out.println("Nombre obtenu dans le Dé #"+de.getIdDe()+": "+de.getFaceActuelle());
+
+            if(!prochainJoueur) {
+                if(desIdentiquesTour == 3) {
+                    joueurActuel.setScoreAccumule(scoreAccumule + 21); //obtenu un Bunco
+                }
+                else if(desIdentiquesTour == 2) {
+                    joueurActuel.setScoreAccumule(scoreAccumule + 2);
+                }
+                else if(desIdentiquesTour == 1) {
+                    joueurActuel.setScoreAccumule(scoreAccumule + 1);
+                }
+
+            }
+            if(desIdentiquesTour == 0 && !troisDesIdentiques) {
+                prochainJoueur = true;
+            }
+
+
         }
 
-        if(!prochainJoueur) {
-            if(desIdentiquesTour == 3) {
-                joueurActuel.setScoreAccumule(scoreAccumule + 21); //obtenu un Bunco
-            }
-            else if(desIdentiquesTour == 2) {
-                joueurActuel.setScoreAccumule(scoreAccumule + 2);
-            }
-            else if(desIdentiquesTour == 1) {
-                joueurActuel.setScoreAccumule(scoreAccumule + 1);
-            }
 
-        }
 
-        if(desIdentiquesTour == 0) {
-            prochainJoueur = true;
-        }
+
+
 
     }
 

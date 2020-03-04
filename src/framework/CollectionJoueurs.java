@@ -3,7 +3,6 @@ package framework;
 
 public class CollectionJoueurs implements Liste<Joueur>{
 
-    //private ArrayList<Joueur> listeJoueurs;
     private Joueur[] listeJoueurs;
 
     public CollectionJoueurs(Joueur[] listeJoueurs) {
