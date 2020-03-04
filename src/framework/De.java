@@ -31,7 +31,10 @@ public class De implements Comparable<De> {
 
     @Override
     public int compareTo(De de) {
-        if(faceObtenue == de.faceObtenue) {
+        if(de == null) {
+            throw new IllegalArgumentException();
+        }
+        else if(faceObtenue == de.faceObtenue) {
             return 0;
         }
         else if(faceObtenue <  de.faceObtenue) {
@@ -40,6 +43,7 @@ public class De implements Comparable<De> {
         else {
             return -1;
         }
+
     }
 
 
