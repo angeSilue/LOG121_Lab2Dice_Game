@@ -33,12 +33,12 @@ public class StrategieBuncoplus implements IStrategie {
         Joueur joueurActuel = jeu.getJoueurActuel();
         int scoreAccumule = 0;
         int desIdentiquesTour = 0;
-        boolean prochainJoueur = false;
+        int desIdentiquesAuPremier = 0;
         boolean troisDesIdentiques = false; //true si les 3 dés sont identiques, mais pas identiques au tour
         int premierChiffre = 0;
-
         ArrayList<De> listeDes = new ArrayList<>();
-        System.out.println("Joueur actuel: "+joueurActuel.getNom());
+
+
         while(iterateurDe.hasNext()) {
             De de = iterateurDe.next();
             listeDes.add(de);
@@ -46,29 +46,36 @@ public class StrategieBuncoplus implements IStrategie {
             scoreAccumule = joueurActuel.getScoreAccumule();
             if(de.getFaceActuelle() == tourActuel) {
                 desIdentiquesTour++;
-                prochainJoueur = false;
+                jeu.setProchainJoueur(false);
             }
             System.out.println("Nombre obtenu dans le Dé #"+de.getIdDe()+": "+de.getFaceActuelle());
-
-            if(!prochainJoueur) {
-                if(desIdentiquesTour == 3) {
-                    joueurActuel.setScoreAccumule(scoreAccumule + 21); //obtenu un Bunco
-                }
-                else if(desIdentiquesTour == 2) {
-                    joueurActuel.setScoreAccumule(scoreAccumule + 2);
-                }
-                else if(desIdentiquesTour == 1) {
-                    joueurActuel.setScoreAccumule(scoreAccumule + 1);
-                }
-
-            }
-            if(desIdentiquesTour == 0 && !troisDesIdentiques) {
-                prochainJoueur = true;
-            }
-
-
+            premierChiffre = listeDes.get(0).getFaceActuelle();
         }
 
+        for(int i = 0; i < listeDes.size(); i++) {
+            if(listeDes.get(i).getFaceActuelle() == premierChiffre) {
+                desIdentiquesAuPremier++;
+            }
+        }
+        if(desIdentiquesAuPremier == 3) {
+            joueurActuel.setScoreAccumule(scoreAccumule + 5);
+            troisDesIdentiques = true;
+        }
+
+        if(desIdentiquesTour == 3) {
+            joueurActuel.setScoreAccumule(scoreAccumule + 21); //obtenu un Bunco
+        }
+        else if(desIdentiquesTour == 2) {
+            joueurActuel.setScoreAccumule(scoreAccumule + 2);
+        }
+        else if(desIdentiquesTour == 1) {
+            joueurActuel.setScoreAccumule(scoreAccumule + 1);
+        }
+
+
+        if(desIdentiquesTour == 0 && !troisDesIdentiques) {
+            jeu.setProchainJoueur(true);
+        }
 
 
 

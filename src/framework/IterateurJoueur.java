@@ -29,6 +29,10 @@ public class IterateurJoueur implements Iterateur<Joueur> {
         return listeJoueurs[position++];
     }
 
+    @Override
+    public Joueur currentItem() {
+        return listeJoueurs[position];
+    }
 
 
 }

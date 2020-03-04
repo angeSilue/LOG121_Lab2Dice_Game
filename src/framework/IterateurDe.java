@@ -28,5 +28,10 @@ public class IterateurDe implements Iterateur<De> {
         return listeDes[position++];
     }
 
+    @Override
+    public De currentItem() {
+        return listeDes[position];
+    }
+
 
 }

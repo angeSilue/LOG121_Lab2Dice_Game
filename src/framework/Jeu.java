@@ -11,6 +11,7 @@ public class Jeu{
     private IStrategie strategie;
     private CollectionDes listeDes;
     private CollectionJoueurs listeJoueurs;
+    private boolean prochainJoueur = true;
 
     public Jeu() {
         this(null, 0);
@@ -27,7 +28,6 @@ public class Jeu{
      * Joue une partie
      */
     public void deroulementPartie() {
-        System.out.println("La partie a commencé!");
         while(!finPartie) {
             jouerTour();
             if(tourActuel >= nbTours) {
@@ -37,27 +37,47 @@ public class Jeu{
         }
     }
 
+    /**
+     *
+     * https://stackoverflow.com/questions/31080272/java-iterator-get-next-without-incrementing
+     */
     public void jouerTour() {
         tourActuel++;
-        System.out.println("\n"+"Tour: "+tourActuel);
+        System.out.println("\n"+"DEBUT DU TOUR #"+tourActuel);
         System.out.println("__________________________________________________________________");
         Iterateur<Joueur> iterateurJoueur = listeJoueurs.creerIterateur();
+        Joueur joueurPrecedent = listeJoueurs.getJoueur(0);
         while(iterateurJoueur.hasNext()) {
-            Joueur joueur = iterateurJoueur.next();
-            joueurActuel = joueur;
-            Iterateur<De> iterateurDe = listeDes.creerIterateur();
-            while(iterateurDe.hasNext()) {
-                De de = iterateurDe.next();
-                de.brasserDe();
+            if(!prochainJoueur) {
+                joueurActuel = joueurPrecedent;
+                System.out.println("C'est encore le tour de: "+joueurActuel.getNom());
+                Iterateur<De> iterateurDe = listeDes.creerIterateur();
+                while(iterateurDe.hasNext()) {
+                    De de = iterateurDe.next();
+                    de.brasserDe();
+                }
+                calculerScoreTour();
             }
-            calculerScoreTour();
+            else if(prochainJoueur) {
+                joueurActuel = iterateurJoueur.next();
+                System.out.println("C'est maintenant le tour de: "+joueurActuel.getNom());
+                Iterateur<De> iterateurDe = listeDes.creerIterateur();
+                while(iterateurDe.hasNext()) {
+                    De de = iterateurDe.next();
+                    de.brasserDe();
+                }
+                joueurPrecedent = joueurActuel;
+                calculerScoreTour();
+            }
         }
 
         //Pour voir le score des joueurs à la fin d'un tour
+        System.out.println("FIN DU TOUR #"+tourActuel);
+        System.out.println("\n=======================================================================================");
         for(int i = 0; i < listeJoueurs.getSize(); i++) {
             System.out.println(listeJoueurs.getJoueur(i).getNom()+" a accumulé "+listeJoueurs.getJoueur(i).getScoreAccumule()+ " points");
         }
-
+        System.out.println("=======================================================================================");
         
     }
 
@@ -136,5 +156,11 @@ public class Jeu{
         this.listeJoueurs = listeJoueurs;
     }
 
+    public boolean isProchainJoueur() {
+        return prochainJoueur;
+    }
 
+    public void setProchainJoueur(boolean prochainJoueur) {
+        this.prochainJoueur = prochainJoueur;
+    }
 }
