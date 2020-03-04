@@ -14,7 +14,7 @@ public class FabriqueTest {
 
     @Test
     public void testConstructorFabrique() {
-        fabrique = new FabriqueBuncoplus(new JeuBuncoplus(new StrategieBuncoplus()));
+        fabrique = new FabriqueBuncoplus(new JeuBuncoplus(new StrategieBuncoplus(), 6));
     }
 
     @Test

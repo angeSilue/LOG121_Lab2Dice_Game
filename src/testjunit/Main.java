@@ -8,6 +8,6 @@ import framework.Fabrique;
 public class Main {
 
     public static void main(String[] args) {
-        Fabrique fabrique = new FabriqueBuncoplus(new JeuBuncoplus(new StrategieBuncoplus()));
+        Fabrique fabrique = new FabriqueBuncoplus(new JeuBuncoplus(new StrategieBuncoplus(), 6));
     }
 }

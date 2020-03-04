@@ -3,7 +3,6 @@ package framework;
 public class Joueur implements Comparable<Joueur> {
 
     String nom;
-    int scoreTour = 0;
     int scoreAccumule = 0;
     boolean vainqueur = false;
     //boolean tourPasse = false;
@@ -13,12 +12,11 @@ public class Joueur implements Comparable<Joueur> {
     }
 
     public Joueur(String nom) {
-        this(nom, 0, 0);
+        this(nom, 0);
     }
 
-    public Joueur(String nom, int scoreTour, int scoreAccumule){
+    public Joueur(String nom, int scoreAccumule){
         this.nom = nom;
-        this.scoreTour= scoreTour;
         this.scoreAccumule = scoreAccumule;
     }
 
@@ -30,6 +28,9 @@ public class Joueur implements Comparable<Joueur> {
      */
     @Override
     public int compareTo(Joueur j) {
+        if(j == null) {
+            throw new IllegalArgumentException();
+        }
         if(scoreAccumule == j.scoreAccumule) {
             return 0;
         }
@@ -50,13 +51,6 @@ public class Joueur implements Comparable<Joueur> {
         this.nom = nom;
     }
 
-    public int getScoreTour() {
-        return scoreTour;
-    }
-
-    public void setScoreTour(int scoreTour) {
-        this.scoreTour = scoreTour;
-    }
 
     public int getScoreAccumule() {
         return scoreAccumule;

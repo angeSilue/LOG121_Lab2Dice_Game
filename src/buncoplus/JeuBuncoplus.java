@@ -6,9 +6,9 @@ import framework.Jeu;
 
 public class JeuBuncoplus extends Jeu {
 
-    private static final int nbTours = 6;
+    //private static final int nbTours = 6;
 
-    public JeuBuncoplus(IStrategie strategie) {
+    public JeuBuncoplus(IStrategie strategie, int nbTours) {
         super(strategie, nbTours);
     }
 
