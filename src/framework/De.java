@@ -5,7 +5,7 @@ import java.util.*;
 public class De implements Comparable<De> {
     private int nbFaces;
     private int idDe;
-    private int faceActuelle;
+    private int faceObtenue;
 
     public De(){
         this(0);
@@ -21,7 +21,7 @@ public class De implements Comparable<De> {
     }
 
     public void brasserDe() {
-        faceActuelle = genererFace(nbFaces);
+        faceObtenue = genererFace(nbFaces);
     }
 
     public int genererFace(int nbFaces){
@@ -31,10 +31,10 @@ public class De implements Comparable<De> {
 
     @Override
     public int compareTo(De de) {
-        if(faceActuelle == de.faceActuelle) {
+        if(faceObtenue == de.faceObtenue) {
             return 0;
         }
-        else if(faceActuelle >  de.faceActuelle) {
+        else if(faceObtenue <  de.faceObtenue) {
             return 1;
         }
         else {
@@ -59,11 +59,11 @@ public class De implements Comparable<De> {
         this.idDe = idDe;
     }
 
-    public int getFaceActuelle() {
-        return faceActuelle;
+    public int getFaceObtenue() {
+        return faceObtenue;
     }
 
-    public void setFaceActuelle(int faceActuelle) {
-        this.faceActuelle = faceActuelle;
+    public void setFaceObtenue(int faceObtenue) {
+        this.faceObtenue = faceObtenue;
     }
 }

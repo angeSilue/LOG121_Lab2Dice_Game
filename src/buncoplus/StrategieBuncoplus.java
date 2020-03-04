@@ -3,8 +3,6 @@ package buncoplus;
 import framework.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 public class StrategieBuncoplus implements IStrategie {
@@ -43,16 +41,16 @@ public class StrategieBuncoplus implements IStrategie {
             listeDes.add(de);
             Collections.sort(listeDes);
             scoreAccumule = joueurActuel.getScoreAccumule();
-            if(de.getFaceActuelle() == tourActuel) {
+            if(de.getFaceObtenue() == tourActuel) {
                 desIdentiquesTour++;
                 jeu.setProchainJoueur(false);
             }
-            System.out.println("Nombre obtenu dans le Dé #"+de.getIdDe()+": "+de.getFaceActuelle());
-            premierChiffre = listeDes.get(0).getFaceActuelle();
+            System.out.println("Nombre obtenu dans le Dé #"+de.getIdDe()+": "+de.getFaceObtenue());
+            premierChiffre = listeDes.get(0).getFaceObtenue();
         }
 
         for(int i = 0; i < listeDes.size(); i++) {
-            if(listeDes.get(i).getFaceActuelle() == premierChiffre) {
+            if(listeDes.get(i).getFaceObtenue() == premierChiffre) {
                 desIdentiquesAuPremier++;
             }
         }

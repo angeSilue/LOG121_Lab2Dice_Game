@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be078966-8ade-4eb2-a5c3-ffd686b6a3f8" name="Default Changelist" comment="Merge branch 'master' of https://github.com/Tzuyunii/log121-dicegame-lab2&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change beforePath="$PROJECT_DIR$/src/framework/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/Jeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/log121-dicegame-lab2/buncoplus/StrategieBuncoplus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/log121-dicegame-lab2/buncoplus/StrategieBuncoplus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buncoplus/StrategieBuncoplus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buncoplus/StrategieBuncoplus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/framework/De.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/framework/De.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testjunit/DeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testjunit/DeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DeTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testjunit.Main" />
       <module name="log121-dicegame-lab2" />
@@ -71,6 +75,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="log121-dicegame-lab2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testjunit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testjunit" />
+      <option name="MAIN_CLASS_NAME" value="testjunit.DeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,22 +105,6 @@
       <option name="PACKAGE_NAME" value="testjunit" />
       <option name="MAIN_CLASS_NAME" value="testjunit.FabriqueTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FabriqueTest.testConstructorFabrique" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="log121-dicegame-lab2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testjunit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="testjunit" />
-      <option name="MAIN_CLASS_NAME" value="testjunit.FabriqueTest" />
-      <option name="METHOD_NAME" value="testConstructorFabrique" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.FabriqueTest.testCreerJoueurs" />
         <item itemvalue="JUnit.FabriqueTest.testCreerDes" />
         <item itemvalue="JUnit.FabriqueTest" />
-        <item itemvalue="JUnit.FabriqueTest.testConstructorFabrique" />
       </list>
     </recent_temporary>
   </component>
@@ -225,28 +228,28 @@
     </state>
     <state x="717" y="159" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582896241932" />
     <state x="1250" y="456" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582859810588" />
-    <state width="1323" height="288" key="GridCell.Tab.0.bottom" timestamp="1583334384559">
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom" timestamp="1583336841140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="288" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583334384559" />
+    <state width="1323" height="138" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583336841140" />
     <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582861585474" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582746998948" />
-    <state width="1323" height="288" key="GridCell.Tab.0.center" timestamp="1583334384559">
+    <state width="1323" height="138" key="GridCell.Tab.0.center" timestamp="1583336841140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="288" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583334384559" />
+    <state width="1323" height="138" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583336841140" />
     <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582861585474" />
     <state width="1638" height="295" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582746998946" />
-    <state width="1323" height="288" key="GridCell.Tab.0.left" timestamp="1583334384559">
+    <state width="1323" height="138" key="GridCell.Tab.0.left" timestamp="1583336841139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="288" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583334384559" />
+    <state width="1323" height="138" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583336841139" />
     <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582861585474" />
     <state width="1638" height="295" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582746998945" />
-    <state width="1323" height="288" key="GridCell.Tab.0.right" timestamp="1583334384559">
+    <state width="1323" height="138" key="GridCell.Tab.0.right" timestamp="1583336841140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="288" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583334384559" />
+    <state width="1323" height="138" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583336841140" />
     <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582861585474" />
     <state width="1638" height="295" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1582746998947" />
     <state x="326" y="0" key="SettingsEditor" timestamp="1582925052153">
