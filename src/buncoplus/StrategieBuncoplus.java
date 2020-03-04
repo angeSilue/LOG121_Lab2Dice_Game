@@ -21,7 +21,6 @@ public class StrategieBuncoplus implements IStrategie {
         for(int i = 0; i < listeJoueur.size(); i++) {
             System.out.println(listeJoueur.get(i).getNom()+" est en position #" +(i+1)+" avec "+listeJoueur.get(i).getScoreAccumule()+" points");
         }
-
         listeJoueur.get(0).setVainqueur(true);
         System.out.println("Le vainqueur est "+listeJoueur.get(0).getNom());
     }
@@ -29,8 +28,8 @@ public class StrategieBuncoplus implements IStrategie {
     @Override
     public void calculerScoreTour(Jeu jeu) {
         Iterateur<De> iterateurDe = jeu.getListeDes().creerIterateur();
-        int tourActuel = jeu.getTourActuel();
         Joueur joueurActuel = jeu.getJoueurActuel();
+        int tourActuel = jeu.getTourActuel();
         int scoreAccumule = 0;
         int desIdentiquesTour = 0;
         int desIdentiquesAuPremier = 0;

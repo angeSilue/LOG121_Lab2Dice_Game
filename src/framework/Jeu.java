@@ -47,6 +47,7 @@ public class Jeu{
         System.out.println("__________________________________________________________________");
         Iterateur<Joueur> iterateurJoueur = listeJoueurs.creerIterateur();
         Joueur joueurPrecedent = listeJoueurs.getJoueur(0);
+
         while(iterateurJoueur.hasNext()) {
             if(!prochainJoueur) {
                 joueurActuel = joueurPrecedent;
@@ -66,9 +67,23 @@ public class Jeu{
                     De de = iterateurDe.next();
                     de.brasserDe();
                 }
-                joueurPrecedent = joueurActuel;
                 calculerScoreTour();
+                joueurPrecedent = joueurActuel;
+                if(!iterateurJoueur.hasNext()) {
+                    while(!prochainJoueur) {
+                        joueurActuel = joueurPrecedent;
+                        System.out.println("C'est encore le tour de: "+joueurActuel.getNom());
+                        iterateurDe = listeDes.creerIterateur();
+                        while(iterateurDe.hasNext()) {
+                            De de = iterateurDe.next();
+                            de.brasserDe();
+                        }
+                        calculerScoreTour();
+                    }
+
+                }
             }
+
         }
 
         //Pour voir le score des joueurs à la fin d'un tour
