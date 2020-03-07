@@ -1,22 +1,36 @@
 package framework;
 
-import java.lang.reflect.Array;
 
-public class CollectionJoueurs {
+public class CollectionJoueurs implements Liste<Joueur>{
 
-    static int taille = 1 ;
+    private Joueur[] listeJoueurs;
 
-   static Joueur[] joueursTab = new Joueur[taille];
-
-    public static void ajouterJoueurs(Joueur joueur){
-
-
-            int i = joueursTab.length;
-            joueursTab[i-1] = joueur;
-            for(Joueur j : joueursTab){
-                System.out.println(j.nom);
-            }
-        taille++;
+    public CollectionJoueurs(Joueur[] listeJoueurs) {
+        this.listeJoueurs = listeJoueurs;
     }
+
+    @Override
+    public IterateurJoueur creerIterateur() {
+        return new IterateurJoueur(listeJoueurs);
+    }
+
+    public void ajouterJoueur(Joueur joueur, int index){
+        listeJoueurs[index] = joueur;
+    }
+
+
+
+    public int getSize() {
+        return listeJoueurs.length;
+    }
+
+    public Joueur getJoueur(int i) {
+        return listeJoueurs[i];
+    }
+
+
+
+
+
 
 }

@@ -1,19 +1,37 @@
 package framework;
 
-public class CollectionDes {
-    static int taille = 1 ;
-    static De[] desTab = new De[taille];
 
-    public static void ajouterDe(De de){
+public class CollectionDes implements Liste<De> {
+    private De[] listeDes;
 
+    public CollectionDes(De[] listeDes) {
+        this.listeDes = listeDes;
+    }
 
-        int i = desTab.length;
-        desTab[i-1] = de;
-        for(De d : desTab){
-            System.out.println(d.idDes);
-        }
-        taille++;
+    @Override
+    public IterateurDe creerIterateur() {
+        return new IterateurDe(listeDes);
+    }
 
+    public void ajouterDe(De de, int index){
+        listeDes[index] = de;
 
     }
+
+    public int getSize() {
+        return listeDes.length;
+    }
+
+    public De getDe(int i) {
+        return listeDes[i];
+    }
+
+
+
+
+
+
+
+
+
 }
